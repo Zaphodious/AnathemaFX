@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import org.controlsfx.control.Rating?>
+
+<FlowPane columnHalignment="CENTER" prefWrapLength="1040.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox alignment="CENTER_LEFT">
+         <children>
+            <Label styleClass="char-sheet-label" text="Archery" />
+            <Rating fx:id="archeryRating" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT">
+         <children>
+            <Label styleClass="char-sheet-label" text="Athletics" />
+            <Rating fx:id="athleticsRating" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT">
+         <children>
+            <Label styleClass="char-sheet-label" text="Awareness" />
+            <Rating fx:id="awarenessRating" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT">
+         <children>
+            <Label styleClass="char-sheet-label" text="Brawl" />
+            <Rating fx:id="brawlRating" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT">
+         <children>
+            <Label styleClass="char-sheet-label" text="Bureaucracy" />
+            <Rating fx:id="bureaucracyRating" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT">
+         <children>
+            <Label styleClass="char-sheet-label" text="Dodge" />
+            <Rating fx:id="dodgeRating" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT">
+         <children>
+            <Label styleClass="char-sheet-label" text="Integrity" />
+            <Rating fx:id="integrityRating" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT">
+         <children>
+            <Label styleClass="char-sheet-label" text="Investigation" />
+            <Rating fx:id="investigationRating" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT">
+         <children>
+            <Label styleClass="char-sheet-label" text="Larceny" />
+            <Rating fx:id="larcenyRating" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT">
+         <children>
+            <Label styleClass="char-sheet-label" text="Linguistics" />
+            <Rating fx:id="linguisticsRating" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT">
+         <children>
+            <Label styleClass="char-sheet-label" text="Lore" />
+            <Rating fx:id="loreRating" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT">
+         <children>
+            <Label styleClass="char-sheet-label" text="Medicine" />
+            <Rating fx:id="medicineRating" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT">
+         <children>
+            <Label styleClass="char-sheet-label" text="Melee" />
+            <Rating fx:id="meleeRating" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT">
+         <children>
+            <Label styleClass="char-sheet-label" text="Occult" />
+            <Rating fx:id="occultRating" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT">
+         <children>
+            <Label styleClass="char-sheet-label" text="Performance" />
+            <Rating fx:id="performanceRating" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT">
+         <children>
+            <Label styleClass="char-sheet-label" text="Presence" />
+            <Rating fx:id="presenceRating" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT">
+         <children>
+            <Label styleClass="char-sheet-label" text="Resistance" />
+            <Rating fx:id="resistanceRating" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT">
+         <children>
+            <Label styleClass="char-sheet-label" text="Ride" />
+            <Rating fx:id="rideRating" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT">
+         <children>
+            <Label styleClass="char-sheet-label" text="Sail" />
+            <Rating fx:id="sailRating" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT">
+         <children>
+            <Label styleClass="char-sheet-label" text="Socialize" />
+            <Rating fx:id="socializeRating" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT">
+         <children>
+            <Label styleClass="char-sheet-label" text="Stealth" />
+            <Rating fx:id="stealthRating" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT">
+         <children>
+            <Label styleClass="char-sheet-label" text="Survival" />
+            <Rating fx:id="survivalRating" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT">
+         <children>
+            <Label styleClass="char-sheet-label" text="Thrown" />
+            <Rating fx:id="thrownRating" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT">
+         <children>
+            <Label styleClass="char-sheet-label" text="War" />
+            <Rating fx:id="warRating" />
+         </children>
+      </HBox>
+   </children>
+</FlowPane>

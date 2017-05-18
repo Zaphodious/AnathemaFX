@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+
+<SplitPane fx:id="chronEditor" dividerPositions="0.85" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <items>
+      <VBox>
+         <children>
+            <TabPane fx:id="editorTabs" nodeOrientation="LEFT_TO_RIGHT" side="LEFT" tabClosingPolicy="UNAVAILABLE" VBox.vgrow="ALWAYS">
+              <tabs>
+                  <Tab fx:id="infoTab" text="Chron Info">
+                     <content>
+                        <VBox>
+                           <children>
+                              <Label text="Chron Name" />
+                              <TextField />
+                              <Label text="Chron Description" />
+                              <TextArea prefHeight="200.0" prefWidth="200.0" />
+                           </children>
+                        </VBox>
+                     </content>
+                  </Tab>
+                <Tab fx:id="meritTab" text="Merits">
+                     <content>
+                        <ScrollPane fx:id="meritArea" fitToHeight="true" fitToWidth="true" pannable="true" styleClass="chronEditorScroller" />
+                     </content>
+                  </Tab>
+                <Tab fx:id="charmTab" text="Charms" />
+              </tabs>
+            </TabPane>
+            <HBox alignment="CENTER_RIGHT">
+               <children>
+                  <Button fx:id="editSave" contentDisplay="CENTER" mnemonicParsing="false" text="Save" />
+                  <Button fx:id="editRevert" layoutX="545.0" layoutY="10.0" mnemonicParsing="false" text="Revert" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox>
+         <children>
+            <HBox VBox.vgrow="NEVER">
+               <children>
+                  <Button mnemonicParsing="false" text="Load In Editor" />
+                  <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="Delete" />
+                  <Button mnemonicParsing="false" text="Duplicate" />
+               </children>
+            </HBox>
+            <ScrollPane fitToHeight="true" fitToWidth="true">
+               <content>
+                  <ListView fx:id="elementList" />
+               </content>
+            </ScrollPane>
+         </children>
+      </VBox>
+   </items>
+</SplitPane>

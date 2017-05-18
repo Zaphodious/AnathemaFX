@@ -1,0 +1,666 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.layout.VBox?>
+<?import org.controlsfx.control.Rating?>
+
+<VBox fx:id="charSheetInsert" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="app-sub-section" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TitledPane styleClass="charSheetRegion" text="Character Information">
+         <content>
+            <HBox>
+               <children>
+                  <ImageView fx:id="characterImageView" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                  <VBox HBox.hgrow="ALWAYS">
+                     <children>
+                        <HBox alignment="TOP_CENTER">
+                           <children>
+                              <VBox alignment="CENTER_RIGHT" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label alignment="CENTER_RIGHT" text="Character Name " />
+                                    <TextField fx:id="characterNameField" />
+                                 </children>
+                              </VBox>
+                              <Separator orientation="VERTICAL" prefWidth="10.0" HBox.hgrow="ALWAYS" />
+                              <VBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label text="Player Name" />
+                                    <TextField fx:id="playerNameField" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <Separator layoutX="20.0" layoutY="62.0" prefHeight="10.0" />
+                        <HBox VBox.vgrow="ALWAYS">
+                           <children>
+                              <VBox alignment="CENTER_RIGHT" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label text="Concept" />
+                                    <TextArea fx:id="conceptArea" prefRowCount="2" wrapText="true" VBox.vgrow="ALWAYS" />
+                                 </children>
+                              </VBox>
+                              <Separator orientation="VERTICAL" prefWidth="10.0" />
+                              <VBox alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label text="Anima" />
+                                    <TextArea fx:id="animaField" prefRowCount="2" wrapText="true" VBox.vgrow="ALWAYS" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </content>
+      </TitledPane>
+      <TitledPane styleClass="charSheetRegion" text="Caste">
+         <content>
+            <VBox>
+               <children>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <Label alignment="CENTER_RIGHT" prefWidth="100.0" text=" Caste " />
+                        <ComboBox fx:id="casteDropdown" prefWidth="150.0" visibleRowCount="20" HBox.hgrow="ALWAYS" />
+                        <Separator halignment="RIGHT" orientation="VERTICAL" prefWidth="10.0" />
+                        <Button fx:id="animaPowerButton" mnemonicParsing="false" text="See Anima Powers" />
+                        <Separator halignment="RIGHT" layoutX="513.0" layoutY="10.0" orientation="VERTICAL" prefWidth="10.0" />
+                        <ComboBox fx:id="supernalDropdown" layoutX="39.0" layoutY="10.0" prefWidth="150.0" HBox.hgrow="ALWAYS" />
+                        <Label contentDisplay="RIGHT" layoutX="10.0" layoutY="10.0" prefWidth="100.0" text=" Supernal " HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </content>
+      </TitledPane>
+      <TitledPane layoutX="10.0" layoutY="749.0" styleClass="charSheetRegion" text="Experience">
+         <content>
+            <HBox alignment="TOP_CENTER" styleClass="value-tracker-box">
+               <children>
+                  <VBox alignment="BOTTOM_CENTER">
+                     <children>
+                        <Label styleClass="value-tracker-text" text="Regular" />
+                        <HBox>
+                           <children>
+                              <VBox alignment="TOP_CENTER">
+                                 <children>
+                                    <Label styleClass="value-tracker-text" text="Current" />
+                                    <Spinner editable="true" fx:id="xpRegularCurrent">
+                                       <styleClass>
+                                          <String fx:value="value-tracker-spinner" />
+                                          <String fx:value="split-arrows-horizontal" />
+                                       </styleClass>
+                                    </Spinner>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0">
+                                 <children>
+                                    <Label text="Total" />
+                                    <Spinner editable="true" fx:id="xpRegularTotal">
+                                       <styleClass>
+                                          <String fx:value="value-tracker-spinner" />
+                                          <String fx:value="split-arrows-horizontal" />
+                                       </styleClass>
+                                    </Spinner>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <Separator halignment="RIGHT" orientation="VERTICAL" prefWidth="9.0" />
+                  <VBox alignment="BOTTOM_CENTER" layoutX="20.0" layoutY="20.0">
+                     <children>
+                        <Label styleClass="value-tracker-text" text="Solar" />
+                        <HBox>
+                           <children>
+                              <VBox alignment="TOP_CENTER">
+                                 <children>
+                                    <Label styleClass="value-tracker-text" text="Current" />
+                                    <Spinner editable="true" fx:id="xpSolarCurrent">
+                                       <styleClass>
+                                          <String fx:value="value-tracker-spinner" />
+                                          <String fx:value="split-arrows-horizontal" />
+                                       </styleClass>
+                                    </Spinner>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0">
+                                 <children>
+                                    <Label styleClass="value-tracker-text" text="Total" />
+                                    <Spinner editable="true" fx:id="xpSolarTotal">
+                                       <styleClass>
+                                          <String fx:value="value-tracker-spinner" />
+                                          <String fx:value="split-arrows-horizontal" />
+                                       </styleClass>
+                                    </Spinner>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <Separator halignment="RIGHT" layoutX="120.0" layoutY="20.0" orientation="VERTICAL" prefWidth="9.0" />
+                  <VBox alignment="BOTTOM_CENTER" layoutX="585.0" layoutY="20.0">
+                     <children>
+                        <Label styleClass="value-tracker-text" text="Crafting" />
+                        <HBox>
+                           <children>
+                              <VBox alignment="TOP_CENTER">
+                                 <children>
+                                    <Label styleClass="value-tracker-text" text="Silver" />
+                                    <Spinner editable="true" fx:id="xpCraftingSilver">
+                                       <styleClass>
+                                          <String fx:value="value-tracker-spinner" />
+                                          <String fx:value="split-arrows-horizontal" />
+                                       </styleClass>
+                                    </Spinner>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0">
+                                 <children>
+                                    <Label styleClass="value-tracker-text" text="Gold" />
+                                    <Spinner editable="true" fx:id="xpCraftingGold">
+                                       <styleClass>
+                                          <String fx:value="value-tracker-spinner" />
+                                          <String fx:value="split-arrows-horizontal" />
+                                       </styleClass>
+                                    </Spinner>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="TOP_CENTER" layoutX="60.0" layoutY="10.0">
+                                 <children>
+                                    <Label styleClass="value-tracker-text" text="White" />
+                                    <Spinner editable="true" fx:id="xpCraftingWhite">
+                                       <styleClass>
+                                          <String fx:value="value-tracker-spinner" />
+                                          <String fx:value="split-arrows-horizontal" />
+                                       </styleClass>
+                                    </Spinner>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </content>
+      </TitledPane>
+      <TitledPane styleClass="charSheetRegion" text="Attributes">
+         <content>
+            <TilePane alignment="TOP_CENTER">
+               <children>
+                  <VBox>
+                     <children>
+                        <HBox>
+                           <children>
+                              <Label alignment="CENTER_RIGHT" prefWidth="100.0" text="Strength" HBox.hgrow="ALWAYS" />
+                              <Separator orientation="VERTICAL" prefWidth="10.0" valignment="TOP" />
+                              <Rating fx:id="StrengthScore" rating="1.0" />
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="10.0">
+                           <children>
+                              <Label alignment="CENTER_RIGHT" prefWidth="100.0" text="Dexterity" HBox.hgrow="ALWAYS" />
+                              <Separator orientation="VERTICAL" prefWidth="10.0" valignment="TOP" />
+                              <Rating fx:id="DexterityScore" rating="1.0" />
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="30.0">
+                           <children>
+                              <Label alignment="CENTER_RIGHT" prefWidth="100.0" text="Stamina" HBox.hgrow="ALWAYS" />
+                              <Separator orientation="VERTICAL" prefWidth="10.0" valignment="TOP" />
+                              <Rating fx:id="StaminaScore" rating="1.0" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox layoutX="472.0" layoutY="20.0">
+                     <children>
+                        <HBox>
+                           <children>
+                              <Label alignment="CENTER_RIGHT" prefWidth="100.0" text="Charisma" HBox.hgrow="ALWAYS" />
+                              <Separator orientation="VERTICAL" prefWidth="10.0" valignment="TOP" />
+                              <Rating fx:id="CharismaScore" rating="1.0" />
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="10.0">
+                           <children>
+                              <Label alignment="CENTER_RIGHT" prefWidth="100.0" text="Manipulation" HBox.hgrow="ALWAYS" />
+                              <Separator orientation="VERTICAL" prefWidth="10.0" valignment="TOP" />
+                              <Rating fx:id="ManipulationScore" rating="1.0" />
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="30.0">
+                           <children>
+                              <Label alignment="CENTER_RIGHT" prefWidth="100.0" text="Appearance" HBox.hgrow="ALWAYS" />
+                              <Separator orientation="VERTICAL" prefWidth="10.0" valignment="TOP" />
+                              <Rating fx:id="AppearanceScore" rating="1.0" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox layoutX="585.0" layoutY="20.0">
+                     <children>
+                        <HBox>
+                           <children>
+                              <Label alignment="CENTER_RIGHT" prefWidth="100.0" text="Percception" HBox.hgrow="ALWAYS" />
+                              <Separator orientation="VERTICAL" prefWidth="10.0" valignment="TOP" />
+                              <Rating fx:id="PerceptionScore" rating="1.0" />
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="10.0">
+                           <children>
+                              <Label alignment="CENTER_RIGHT" prefWidth="100.0" text="Intelligence" HBox.hgrow="ALWAYS" />
+                              <Separator orientation="VERTICAL" prefWidth="10.0" valignment="TOP" />
+                              <Rating fx:id="IntelligenceScore" rating="1.0" />
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="30.0">
+                           <children>
+                              <Label alignment="CENTER_RIGHT" prefWidth="100.0" text="Wits" HBox.hgrow="ALWAYS" />
+                              <Separator orientation="VERTICAL" prefWidth="10.0" valignment="TOP" />
+                              <Rating fx:id="WitsScore" rating="1.0" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </TilePane>
+         </content>
+      </TitledPane>
+      <TitledPane layoutX="10.0" layoutY="560.0" styleClass="charSheetRegion" text="Ability Spcifics">
+         <content>
+            <HBox alignment="TOP_CENTER">
+               <children>
+                  <VBox>
+                     <children>
+                        <Label text="Favored" />
+                        <ChoiceBox prefWidth="150.0" />
+                     </children>
+                  </VBox>
+                  <VBox />
+               </children>
+            </HBox>
+         </content>
+      </TitledPane>
+      <TitledPane layoutX="10.0" layoutY="639.0" styleClass="charSheetRegion" text="Abilities">
+         <content>
+            <VBox>
+               <children>
+                  <HBox alignment="TOP_CENTER">
+                     <children>
+                        <CheckBox allowIndeterminate="true" disable="true" mnemonicParsing="false" prefHeight="30.0" prefWidth="151.0" selected="true" text="Favored" />
+                        <CheckBox allowIndeterminate="true" disable="true" indeterminate="true" mnemonicParsing="false" text="Caste" />
+                     </children>
+                  </HBox>
+                  <TilePane fx:id="abilityFlow" alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" prefColumns="3" prefRows="10" />
+               </children>
+            </VBox>
+         </content>
+      </TitledPane>
+      <TitledPane fx:id="specializationspane" prefWidth="200.0" styleClass="charSheetRegion" text="Specializations">
+         <content>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <HBox>
+                     <children>
+                        <Button fx:id="removespec" mnemonicParsing="false" text="Remove Selected" />
+                        <Separator orientation="VERTICAL" prefHeight="25.0" prefWidth="19.0" />
+                        <Button fx:id="addnewspec" mnemonicParsing="false" text="Add New" />
+                        <ComboBox fx:id="speicalAbilityDropdown" prefWidth="150.0" promptText="Ability" visibleRowCount="24" />
+                        <TextField fx:id="speicalField" />
+                     </children>
+                  </HBox>
+                  <ListView fx:id="specialListView" editable="true" />
+               </children>
+            </VBox>
+         </content>
+      </TitledPane>
+      <TitledPane styleClass="charSheetRegion" text="Essence">
+         <content>
+            <VBox>
+               <children>
+                  <VBox alignment="CENTER">
+                     <children>
+                        <Label alignment="CENTER" text="Essence Level" />
+                        <Rating fx:id="essenceLevelRating" />
+                        <Separator prefWidth="200.0" />
+                     </children>
+                  </VBox>
+                  <HBox alignment="TOP_CENTER" styleClass="value-tracker-box">
+                     <children>
+                        <VBox styleClass="value-tracker" />
+                        <VBox alignment="BOTTOM_CENTER">
+                           <children>
+                              <Label styleClass="value-tracker-text" text="Personal" />
+                              <HBox>
+                                 <children>
+                                    <VBox alignment="TOP_CENTER">
+                                       <children>
+                                          <Label styleClass="value-tracker-text" text="Current" />
+                                          <Spinner fx:id="essencePersonalCurrent" editable="true" layoutX="10.0" layoutY="29.0">
+                                             <styleClass>
+                                                <String fx:value="value-tracker-spinner" />
+                                                <String fx:value="split-arrows-horizontal" />
+                                             </styleClass></Spinner>
+                                       </children>
+                                    </VBox>
+                                    <VBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0">
+                                       <children>
+                                          <Label styleClass="value-tracker-text" text="Max" />
+                                          <Spinner fx:id="essencePersonalMax" editable="true">
+                                             <styleClass>
+                                                <String fx:value="value-tracker-spinner" />
+                                                <String fx:value="split-arrows-horizontal" />
+                                             </styleClass></Spinner>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <Separator halignment="RIGHT" orientation="VERTICAL" prefWidth="9.0" />
+                        <VBox alignment="BOTTOM_CENTER" layoutX="20.0" layoutY="20.0">
+                           <children>
+                              <Label styleClass="value-tracker-text" text="Perepheral" />
+                              <HBox>
+                                 <children>
+                                    <VBox alignment="TOP_CENTER">
+                                       <children>
+                                          <Label styleClass="value-tracker-text" text="Current" />
+                                          <Spinner fx:id="essencePerepheralCurrent" editable="true">
+                                             <styleClass>
+                                                <String fx:value="value-tracker-spinner" />
+                                                <String fx:value="split-arrows-horizontal" />
+                                             </styleClass></Spinner>
+                                       </children>
+                                    </VBox>
+                                    <VBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0">
+                                       <children>
+                                          <Label styleClass="value-tracker-text" text="Max" />
+                                          <Spinner fx:id="essencePerepheralMax" editable="true">
+                                             <styleClass>
+                                                <String fx:value="value-tracker-spinner" />
+                                                <String fx:value="split-arrows-horizontal" />
+                                             </styleClass></Spinner>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <Separator halignment="RIGHT" layoutX="120.0" layoutY="20.0" orientation="VERTICAL" prefWidth="9.0" />
+                        <VBox alignment="BOTTOM_CENTER">
+                           <children>
+                              <Label styleClass="value-tracker-text" text="Committed" />
+                              <Spinner fx:id="essencePerepheralCommitted" editable="true">
+                                 <styleClass>
+                                    <String fx:value="value-tracker-spinner" />
+                                    <String fx:value="split-arrows-horizontal" />
+                                 </styleClass></Spinner>
+                           </children>
+                        </VBox>
+                        <Separator halignment="RIGHT" layoutX="120.0" layoutY="20.0" orientation="VERTICAL" prefWidth="9.0" />
+                        <VBox alignment="BOTTOM_CENTER" layoutX="238.0" layoutY="20.0">
+                           <children>
+                              <Label alignment="BOTTOM_CENTER" styleClass="value-tracker-text" text="Sorcerous Motes" textAlignment="CENTER" wrapText="true" />
+                              <Spinner fx:id="essenceSorcerous" editable="true">
+                                 <styleClass>
+                                    <String fx:value="value-tracker-spinner" />
+                                    <String fx:value="split-arrows-horizontal" />
+                                 </styleClass></Spinner>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </content>
+      </TitledPane>
+      <TitledPane layoutX="10.0" layoutY="1089.0" styleClass="charSheetRegion" text="Charms">
+         <content>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Button fx:id="charmDetailButton" mnemonicParsing="false" styleClass="detail-button" />
+                        <Separator orientation="VERTICAL" prefHeight="25.0" prefWidth="19.0" />
+                        <Button fx:id="removeMeritButton1" mnemonicParsing="false" text="Remove Selected" />
+                        <Separator orientation="VERTICAL" prefHeight="25.0" prefWidth="19.0" />
+                        <Button mnemonicParsing="false" text="Add New" />
+                        <ComboBox fx:id="charmDropdown" prefWidth="150.0" promptText="Charm" />
+                        <Label alignment="CENTER_RIGHT" prefWidth="50.0" text="Note:" />
+                        <TextField fx:id="charmNoteField" HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
+                  <ListView fx:id="charmListBox" editable="true" />
+               </children>
+            </VBox>
+         </content>
+      </TitledPane>
+      <TitledPane layoutX="10.0" layoutY="1554.0" styleClass="charSheetRegion" text="Sorcery">
+         <content>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Button fx:id="spellDetailButton" mnemonicParsing="false" styleClass="detail-button" />
+                        <Separator orientation="VERTICAL" prefHeight="25.0" prefWidth="19.0" />
+                        <Button fx:id="removeMeritButton12" mnemonicParsing="false" text="Remove Selected" />
+                        <Separator orientation="VERTICAL" prefHeight="25.0" prefWidth="19.0" />
+                        <Button fx:id="removeMeritButton121" layoutX="55.0" layoutY="10.0" mnemonicParsing="false" text="Set Selected As Control" />
+                        <Separator layoutX="162.0" layoutY="10.0" orientation="VERTICAL" prefHeight="25.0" prefWidth="19.0" />
+                        <Button mnemonicParsing="false" text="Add New" />
+                        <ComboBox fx:id="spellDropdown" prefWidth="150.0" promptText="Spell" />
+                        <Label alignment="CENTER_RIGHT" prefWidth="50.0" text="Note:" />
+                        <TextField fx:id="spellNoteField" HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
+                  <ListView fx:id="spellListBox" editable="true" />
+               </children>
+            </VBox>
+         </content>
+      </TitledPane>
+      <TitledPane fx:id="martialartspane" layoutX="10.0" layoutY="681.0" prefWidth="200.0" styleClass="charSheetRegion" text="Martial Arts">
+         <content>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <HBox>
+                     <children>
+                        <Button fx:id="removemartialart" mnemonicParsing="false" text="Remove Selected" />
+                        <Separator orientation="VERTICAL" prefHeight="25.0" prefWidth="19.0" />
+                        <Button fx:id="addnewmartialart" mnemonicParsing="false" text="Add New" />
+                        <ComboBox fx:id="martialArtsStyleDropdown" prefWidth="150.0" promptText="Martial Arts Style" visibleRowCount="24" />
+                        <Rating fx:id="martialArtsRating" />
+                     </children>
+                  </HBox>
+                  <ListView fx:id="martialArtsListView" editable="true" />
+               </children>
+            </VBox>
+         </content>
+      </TitledPane>
+      <TitledPane fx:id="martialartspane1" layoutX="10.0" layoutY="689.0" prefWidth="200.0" styleClass="charSheetRegion" text="Crafting">
+         <content>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <HBox>
+                     <children>
+                        <Button fx:id="removeCraftingButton" mnemonicParsing="false" text="Remove Selected" />
+                        <Separator orientation="VERTICAL" prefHeight="25.0" prefWidth="19.0" />
+                        <Button fx:id="addNewCraftingButton" mnemonicParsing="false" text="Add New" />
+                        <TextField fx:id="craftNameField" />
+                        <Rating fx:id="craftingRating" />
+                     </children>
+                  </HBox>
+                  <ListView fx:id="craftingListView" editable="true" />
+               </children>
+            </VBox>
+         </content>
+      </TitledPane>
+      <TitledPane layoutX="10.0" layoutY="1008.0" styleClass="charSheetRegion" text="Intimacies">
+         <content>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT">
+                     <children>
+                        <Label alignment="CENTER_RIGHT" prefWidth="70.0" text="Resolve " textAlignment="RIGHT" />
+                        <TextField fx:id="resolveField" editable="false" prefColumnCount="2" />
+                        <Separator orientation="VERTICAL" prefWidth="5.0" />
+                        <TextField fx:id="guileField" editable="false" layoutX="57.0" layoutY="10.0" prefColumnCount="2" />
+                        <Label layoutX="10.0" layoutY="10.0" prefWidth="70.0" text=" Guile" textAlignment="RIGHT" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Button mnemonicParsing="false" styleClass="detail-button" />
+                        <Separator orientation="VERTICAL" prefHeight="25.0" prefWidth="19.0" />
+                        <Button fx:id="removeMeritButton2" mnemonicParsing="false" text="Remove Selected" />
+                        <Separator orientation="VERTICAL" prefHeight="25.0" prefWidth="19.0" />
+                        <Button fx:id="addNewMeritButton2" mnemonicParsing="false" text="Add New" />
+                        <FlowPane HBox.hgrow="ALWAYS">
+                           <children>
+                              <ComboBox fx:id="intimacyIntensityDropdown" prefWidth="150.0" promptText="Intensity" />
+                              <ComboBox fx:id="intimacyTypeDropdown" prefWidth="150.0" promptText="Type" />
+                              <HBox>
+                                 <children>
+                                    <Label alignment="CENTER_RIGHT" prefWidth="80.0" text="Subject" />
+                                    <TextField fx:id="intimacySubjectField" HBox.hgrow="ALWAYS" />
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="310.0" layoutY="10.0">
+                                 <children>
+                                    <Label alignment="CENTER_RIGHT" prefWidth="80.0" text="Description" />
+                                    <TextField fx:id="intimacyDescField" HBox.hgrow="ALWAYS" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </FlowPane>
+                     </children>
+                  </HBox>
+                  <ListView fx:id="intimacyListView" editable="true" minHeight="200.0" VBox.vgrow="ALWAYS" />
+               </children>
+            </VBox>
+         </content>
+      </TitledPane>
+      <TitledPane fx:id="specializationspane111" layoutX="10.0" layoutY="1541.0" prefWidth="200.0" styleClass="charSheetRegion" text="Willpower">
+         <content>
+            <VBox styleClass="faux-double-column-box">
+               <children>
+                  <HBox>
+                     <children>
+                        <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="23.0" prefWidth="75.0" styleClass="side-label" text="Permanent" HBox.hgrow="ALWAYS" />
+                        <Separator orientation="VERTICAL" prefWidth="19.0" />
+                        <Rating fx:id="permWillpowerRating" max="10" rating="1.0" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="20.0" layoutY="20.0">
+                     <children>
+                        <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="23.0" prefWidth="75.0" styleClass="side-label" text="Temporary" HBox.hgrow="ALWAYS" />
+                        <Separator orientation="VERTICAL" prefWidth="19.0" />
+                        <Rating fx:id="tempWillpowerRating" max="10" rating="1.0" styleClass="willpower-rating" />
+                     </children>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="23.0" prefWidth="75.0" styleClass="side-label" text="Limit" HBox.hgrow="ALWAYS" />
+                        <Separator orientation="VERTICAL" prefWidth="19.0" />
+                        <Rating fx:id="limitRating" max="10" rating="1.0" />
+                        <Button fx:id="limitBreakButton" disable="true" mnemonicParsing="false" text="Limit Break!" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="20.0" layoutY="66.0">
+                     <children>
+                        <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="23.0" prefWidth="75.0" styleClass="side-label" text="Limit Trigger" HBox.hgrow="ALWAYS" />
+                        <Separator orientation="VERTICAL" prefWidth="19.0" />
+                        <TextArea fx:id="triggerArea" prefRowCount="2" HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </content>
+      </TitledPane>
+      <TitledPane layoutX="10.0" layoutY="611.0" styleClass="charSheetRegion" text="Merits">
+         <content>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Button fx:id="meritDetailButton" mnemonicParsing="false" styleClass="detail-button" />
+                        <Separator orientation="VERTICAL" prefHeight="25.0" prefWidth="19.0" />
+                        <Button fx:id="removeMeritButton" mnemonicParsing="false" text="Remove Selected" />
+                        <Separator orientation="VERTICAL" prefHeight="25.0" prefWidth="19.0" />
+                        <Button fx:id="addNewMeritButton" mnemonicParsing="false" text="Add New" />
+                        <ComboBox fx:id="meritDropdown" prefWidth="150.0" promptText="Merit" />
+                        <ComboBox fx:id="meritRatingDropdown" layoutX="202.0" layoutY="10.0" prefWidth="150.0" promptText="Ranking" />
+                        <Label alignment="CENTER_RIGHT" prefWidth="50.0" text="Note:" />
+                        <TextField fx:id="meritNoteField" HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
+                  <ListView fx:id="meritListView" editable="true" />
+               </children>
+            </VBox>
+         </content>
+      </TitledPane>
+      <TitledPane layoutX="10.0" layoutY="1234.0" styleClass="charSheetRegion" text="Weapons">
+         <content>
+            <VBox>
+               <children>
+                  <HBox alignment="CENTER_LEFT" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Button mnemonicParsing="false" styleClass="detail-button" />
+                        <Separator orientation="VERTICAL" prefHeight="25.0" prefWidth="19.0" />
+                        <Button fx:id="removeMeritButton11" mnemonicParsing="false" text="Remove Selected" />
+                        <Button fx:id="removeMeritButton111" layoutX="55.0" layoutY="10.0" mnemonicParsing="false" text="Edit Selected" />
+                        <Separator orientation="VERTICAL" prefHeight="25.0" prefWidth="19.0" />
+                        <Button mnemonicParsing="false" text="Add New" />
+                        <TextField fx:id="weaponNameField" />
+                        <Separator layoutX="162.0" layoutY="10.0" orientation="VERTICAL" prefHeight="25.0" prefWidth="19.0" />
+                     </children>
+                  </HBox>
+                  <ListView fx:id="weaponBox" editable="true" prefHeight="75.0" />
+               </children>
+            </VBox>
+         </content>
+      </TitledPane>
+      <TitledPane layoutX="10.0" layoutY="1922.0" styleClass="charSheetRegion" text="Armor">
+         <content>
+            <VBox>
+               <children>
+                  <HBox alignment="CENTER_LEFT" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Button mnemonicParsing="false" styleClass="detail-button" />
+                        <Separator orientation="VERTICAL" prefHeight="25.0" prefWidth="19.0" />
+                        <Button fx:id="removeMeritButton111" mnemonicParsing="false" text="Remove Selected" />
+                        <Button fx:id="removeMeritButton1111" layoutX="55.0" layoutY="10.0" mnemonicParsing="false" text="Edit Selected" />
+                        <Separator orientation="VERTICAL" prefHeight="25.0" prefWidth="19.0" />
+                        <Button mnemonicParsing="false" text="Add New" />
+                        <TextField fx:id="armorNameField" />
+                        <Separator layoutX="162.0" layoutY="10.0" orientation="VERTICAL" prefHeight="25.0" prefWidth="19.0" />
+                     </children>
+                  </HBox>
+                  <ListView fx:id="armorBox" editable="true" prefHeight="75.0" />
+               </children>
+            </VBox>
+         </content>
+      </TitledPane>
+      <TitledPane fx:id="defensePane" layoutX="10.0" layoutY="2949.0" prefWidth="200.0" styleClass="charSheetRegion" text="Defense" />
+      <TitledPane fx:id="healthPane" layoutX="10.0" layoutY="1181.0" prefWidth="200.0" styleClass="charSheetRegion" text="Health" />
+   </children>
+</VBox>

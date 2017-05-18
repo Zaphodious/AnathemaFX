@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox id="window-basis" fx:id="appToolBar" alignment="TOP_CENTER" styleClass="selector-window-box" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label styleClass="window-title" text="Select An Image" />
+      <HBox alignment="CENTER_RIGHT" VBox.vgrow="ALWAYS">
+         <children>
+            <ScrollPane fx:id="imageChooserScrollpane" fitToHeight="true" fitToWidth="true" styleClass="selector-scroll-pane" HBox.hgrow="ALWAYS" />
+            <ImageView fx:id="displayImageView" fitHeight="350.0" fitWidth="350.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS" />
+         </children>
+      </HBox>
+      <HBox alignment="BOTTOM_CENTER" fillHeight="false" styleClass="selector-button-section">
+         <children>
+            <Button fx:id="appButtonExit" mnemonicParsing="false" text="Use Selected" />
+            <Button mnemonicParsing="false" text="Add New" />
+            <Button mnemonicParsing="false" text="Add Folder" />
+            <Button fx:id="appButtonCancel" mnemonicParsing="false" text="Cancel" />
+         </children>
+      </HBox>
+   </children>
+</VBox>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import org.controlsfx.control.Rating?>
+
+<FlowPane xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox>
+         <children>
+            <HBox alignment="CENTER_LEFT">
+               <children>
+                  <Label styleClass="char-sheet-label" text="Strength" />
+                  <Rating fx:id="strengthRating" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT">
+               <children>
+                  <Label styleClass="char-sheet-label" text="Dexterity" />
+                  <Rating fx:id="dexterityRating" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT">
+               <children>
+                  <Label styleClass="char-sheet-label" text="Stamina" />
+                  <Rating fx:id="staminaRating" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox>
+         <children>
+            <HBox alignment="CENTER_LEFT">
+               <children>
+                  <Label styleClass="char-sheet-label" text="Charisma" />
+                  <Rating fx:id="charismaRating" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT">
+               <children>
+                  <Label styleClass="char-sheet-label" text="Manipulation" />
+                  <Rating fx:id="manipulationRating" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT">
+               <children>
+                  <Label styleClass="char-sheet-label" text="Appearance" />
+                  <Rating fx:id="AppearanceRating" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox layoutX="20.0" layoutY="140.0">
+         <children>
+            <HBox alignment="CENTER_LEFT">
+               <children>
+                  <Label styleClass="char-sheet-label" text="Perception" />
+                  <Rating fx:id="perceptionRating" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT">
+               <children>
+                  <Label styleClass="char-sheet-label" text="Intelligence" />
+                  <Rating fx:id="intelligenceRating" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT">
+               <children>
+                  <Label styleClass="char-sheet-label" text="Wits" />
+                  <Rating fx:id="witsRating" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</FlowPane>

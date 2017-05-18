@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<SplitPane dividerPositions="0.29797979797979796" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.111">
+  <items>
+    <AnchorPane>
+         <children>
+            <ScrollPane fx:id="sideScrollPane" fitToHeight="true" fitToWidth="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+         </children></AnchorPane>
+    <AnchorPane>
+         <children>
+            <ScrollPane fx:id="mainScrollPane" fitToHeight="true" fitToWidth="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <content>
+                  <TextField promptText="Kawabunga!" />
+               </content>
+            </ScrollPane>
+         </children></AnchorPane>
+  </items>
+</SplitPane>

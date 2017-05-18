@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="solarCharSheetBase" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TitledPane styleClass="char-sheet-titledpane" text="Character Info">
+         <content>
+            <VBox fx:id="charInfo" />
+         </content>
+      </TitledPane>
+      <TitledPane layoutX="10.0" layoutY="10.0" styleClass="char-sheet-titledpane" text="Attributes">
+         <content>
+            <VBox fx:id="attributesSection" />
+         </content>
+      </TitledPane>
+      <TitledPane layoutX="10.0" layoutY="168.0" styleClass="char-sheet-titledpane" text="Abilities">
+         <content>
+            <VBox fx:id="abilitySection" />
+         </content>
+      </TitledPane>
+      <TitledPane layoutX="10.0" layoutY="284.0" styleClass="char-sheet-titledpane" text="Ability Info">
+         <content>
+            <FlowPane columnHalignment="CENTER" prefWrapLength="1040.0">
+               <children>
+                  <HBox alignment="TOP_CENTER">
+                     <children>
+                        <VBox HBox.hgrow="ALWAYS">
+                           <children>
+                              <Label styleClass="char-sheet-label" text="Caste Abilities" />
+                              <ComboBox prefWidth="150.0" />
+                              <ComboBox prefWidth="150.0" />
+                              <ComboBox prefWidth="150.0" />
+                              <ComboBox prefWidth="150.0" />
+                              <ComboBox prefWidth="150.0" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="TOP_CENTER" layoutX="405.0" layoutY="20.0">
+                     <children>
+                        <VBox HBox.hgrow="ALWAYS">
+                           <children>
+                              <Label styleClass="char-sheet-label" text="Favored Abilities" />
+                              <ComboBox prefWidth="150.0" />
+                              <ComboBox prefWidth="150.0" />
+                              <ComboBox prefWidth="150.0" />
+                              <ComboBox prefWidth="150.0" />
+                              <ComboBox prefWidth="150.0" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="TOP_CENTER" layoutX="540.0" layoutY="20.0">
+                     <children>
+                        <VBox alignment="TOP_CENTER" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Label styleClass="char-sheet-label" text="Specialties" />
+                              <ListView prefHeight="140.0" prefWidth="250.0" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </FlowPane>
+         </content>
+      </TitledPane>
+      <TitledPane layoutX="10.0" layoutY="654.0" styleClass="char-sheet-titledpane" text="Specialties">
+         <content>
+            <FlowPane columnHalignment="CENTER" prefWrapLength="1040.0">
+               <children>
+                  <HBox>
+                     <children>
+                        <Label styleClass="char-sheet-label" text="Caste Abilities" />
+                        <VBox HBox.hgrow="ALWAYS">
+                           <children>
+                              <ComboBox prefWidth="150.0" />
+                              <ComboBox prefWidth="150.0" />
+                              <ComboBox prefWidth="150.0" />
+                              <ComboBox prefWidth="150.0" />
+                              <ComboBox prefWidth="150.0" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="405.0" layoutY="20.0">
+                     <children>
+                        <Label styleClass="char-sheet-label" text="Favored Abilities" />
+                        <VBox HBox.hgrow="ALWAYS">
+                           <children>
+                              <ComboBox prefWidth="150.0" />
+                              <ComboBox prefWidth="150.0" />
+                              <ComboBox prefWidth="150.0" />
+                              <ComboBox prefWidth="150.0" />
+                              <ComboBox prefWidth="150.0" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </FlowPane>
+         </content>
+      </TitledPane>
+   </children>
+</VBox>

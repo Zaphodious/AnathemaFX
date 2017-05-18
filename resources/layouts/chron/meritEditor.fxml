@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="800.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox VBox.vgrow="ALWAYS">
+         <children>
+            <GridPane minWidth="1000.0" styleClass="chronEditorContent" HBox.hgrow="ALWAYS">
+              <columnConstraints>
+                <ColumnConstraints halignment="LEFT" hgrow="NEVER" maxWidth="146.0" minWidth="10.0" prefWidth="104.0" />
+                <ColumnConstraints halignment="RIGHT" hgrow="ALWAYS" minWidth="10.0" prefWidth="196.0" />
+                  <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" minWidth="10.0" prefWidth="300.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="150.0" minHeight="-Infinity" prefHeight="28.0" valignment="TOP" vgrow="NEVER" />
+                <RowConstraints maxHeight="497.0" minHeight="-Infinity" prefHeight="469.0" valignment="TOP" vgrow="ALWAYS" />
+                <RowConstraints fillHeight="false" maxHeight="315.0" minHeight="-Infinity" prefHeight="44.0" valignment="TOP" vgrow="NEVER" />
+                  <RowConstraints fillHeight="false" maxHeight="309.0" minHeight="10.0" prefHeight="90.0" valignment="TOP" vgrow="ALWAYS" />
+                  <RowConstraints maxHeight="344.0" minHeight="10.0" prefHeight="129.0" valignment="TOP" vgrow="NEVER" />
+              </rowConstraints>
+               <children>
+                  <Label text="Name" />
+                  <TextField fx:id="meritNameText" GridPane.columnIndex="1" GridPane.vgrow="ALWAYS" />
+                  <Label layoutX="10.0" layoutY="17.0" text="Description" GridPane.rowIndex="1" />
+                  <TextArea fx:id="meritDescriptionText" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label layoutX="10.0" layoutY="17.0" text="Possible Ranks" GridPane.rowIndex="2" />
+                  <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label text="1" />
+                              <CheckBox fx:id="meritRankCheck1" mnemonicParsing="false" />
+                           </children>
+                        </VBox>
+                        <VBox layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label text="2" />
+                              <CheckBox fx:id="meritRankCheck2" mnemonicParsing="false" />
+                           </children>
+                        </VBox>
+                        <VBox layoutX="85.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label text="3" />
+                              <CheckBox fx:id="meritRankCheck3" mnemonicParsing="false" />
+                           </children>
+                        </VBox>
+                        <VBox layoutX="110.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label text="4" />
+                              <CheckBox fx:id="meritRankCheck4" mnemonicParsing="false" />
+                           </children>
+                        </VBox>
+                        <VBox layoutX="122.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label text="5" />
+                              <CheckBox fx:id="meritRankCheck5" mnemonicParsing="false" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <Label layoutX="10.0" layoutY="159.0" text="Prereq Things" GridPane.rowIndex="3" />
+                  <VBox GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <children>
+                        <HBox>
+                           <children>
+                              <RadioButton fx:id="meritAndToggle" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" selected="true" text="And">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="prereqMode" />
+                                 </toggleGroup>
+                              </RadioButton>
+                              <RadioButton fx:id="meritOrToggle" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" text="Or" toggleGroup="$prereqMode" />
+                           </children>
+                        </HBox>
+                        <TextArea fx:id="meritPrereqText" prefHeight="200.0" prefWidth="200.0" />
+                     </children>
+                  </VBox>
+                  <VBox GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                     <children>
+                        <HBox>
+                           <children>
+                              <Label text="1" />
+                              <TextField fx:id="meritTagText1" HBox.hgrow="ALWAYS" />
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="10.0">
+                           <children>
+                              <Label text="2" />
+                              <TextField fx:id="meritTagText2" HBox.hgrow="ALWAYS" />
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="37.0">
+                           <children>
+                              <Label text="3" />
+                              <TextField fx:id="meritTagText3" HBox.hgrow="ALWAYS" />
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="37.0">
+                           <children>
+                              <Label text="4" />
+                              <TextField fx:id="meritTagText4" HBox.hgrow="ALWAYS" />
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="64.0">
+                           <children>
+                              <Label text="5" />
+                              <TextField fx:id="meritTagText5" HBox.hgrow="ALWAYS" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <Label text="The Name of the Merit" GridPane.columnIndex="2" />
+                  <Label layoutX="362.0" layoutY="21.0" text="The description of the Merit as listed in the book. It is suggested that one copy-paste the text back and forth with an internal program for editing purposes." wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <Label layoutX="362.0" layoutY="149.0" text="What ranks can be had" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <Label layoutX="362.0" layoutY="278.0" text="What things must be present on the character sheet in order to purchase this Merit. And indicates that all must be present, while Or indicates that only one need be. Numbers should follow the noted thing with a space. Different elements should be seperated with commas. Ex- &quot;Athletics 2&quot;, &quot;Desmaine 3&quot;, &quot;Stamina 3, Resistance 3&quot;" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                  <Label alignment="TOP_LEFT" layoutX="362.0" layoutY="318.0" prefHeight="189.0" text="What Tags this gives the character. A tag is only given if the character has the given rank in the merit. Tags follow the following format: a colin, the merit name in all lowercase with spaces replaced by dashes, and any number indicating rank at the end seperated by a dash. Non-ranked tags needn't have numbers. Multiple tags can be included this way. Example- &quot;:artifact-3&quot;  &quot;:martial-artist&quot; &quot;:desmain-2 :hearthstone-2 :manse-1&quot;" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="TOP" />
+                  <Label text="Static Tags" GridPane.rowIndex="4" />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+            </GridPane>
+         </children>
+      </HBox>
+   </children>
+</VBox>
